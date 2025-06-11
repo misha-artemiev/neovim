@@ -1,6 +1,6 @@
 return {
   'saghen/blink.compat',
-  lazy = true,
+  lazy = false,
   version = '2.*',
   opts = {},
   enabled = true,
