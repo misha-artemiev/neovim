@@ -8,7 +8,7 @@ return {
       nerd_font_variant = 'mono',
     },
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer', "avante_commands", "avante_mentions", "avante_files", },
+      default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer', "avante_commands", "avante_mentions", "avante_files", },
       per_filetype = {
         sql = { 'snippets', 'dadbod', 'buffer' },
       },
@@ -34,6 +34,11 @@ return {
         dadbod = {
           name = "Dadbod",
           module = "vim_dadbod_completion.blink",
+        },
+        lazydev = {
+          name = "LazyDev",
+          module = "lazydev.integrations.blink",
+          score_offset = 100,
         },
       },
     },
