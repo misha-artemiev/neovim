@@ -87,5 +87,8 @@ return {
     end
 
   end,
+  keys = {
+    {"<leader>dc", function() require"dap".continue() end, silent = true},
+  },
   enabled = true,
 }
