@@ -18,7 +18,7 @@ return {
       },
     },
     completion = {
-      list = { selection = { preselect = false, auto_insert = true } },
+      list = { selection = { preselect = false, auto_insert = false } },
       documentation = { auto_show = false },
       ghost_text = { enabled = true },
       menu = {
