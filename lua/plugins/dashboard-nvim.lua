@@ -8,32 +8,32 @@ return {
       config = {
         center = {
           {
-            icon = ' ',
+            icon = '󰈞 ',
             desc = 'Find File',
             key = 'f',
             key_hl = 'Number',
             action = function() require("telescope.builtin").find_files() end,
           },
           {
-            icon = ' ',
+            icon = ' ',
             desc = 'Open Config',
             key = 'c',
             action = ':NvimTreeToggle ~/.config/nvim'
           },
           {
-            icon = ' ',
+            icon = ' ',
             desc = 'Open lazy',
             key = 'l',
             action = ':Lazy'
           },
           {
-            icon = ' ',
+            icon = '󰚰 ',
             desc = 'Lazy Update',
             key = 'u',
             action = ':Lazy update'
           },
           {
-            icon = ' ',
+            icon = '󰈆 ',
             desc = 'Quit',
             key = 'q',
             action = ':qa'
