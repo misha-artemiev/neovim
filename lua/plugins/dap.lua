@@ -20,29 +20,7 @@ return {
       },
     }
 
-    dap.configurations.c = {
-      {
-        name = "Launch with GDB",
-        type = "gdb",
-        request = "launch",
-        program = function()
-          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-        end,
-        cwd = "${workspaceFolder}",
-        stopAtBeginningOfMainSubprogram = false,
-      },
-      {
-        name = 'Launch with LLDB\n',
-        type = 'lldb',
-        request = 'launch',
-        program = function()
-          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-        end,
-        cwd = '${workspaceFolder}',
-        stopOnEntry = false,
-        args = {},
-      },
-    }
+    dap.configurations.c = {}
 
   end,
   keys = {
