@@ -4,7 +4,7 @@ return {
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup {
-      ensure_installed = { 
+      ensure_installed = {
         "c", "cpp", "lua", "vim",
         "cmake", "java", "css",
         "html", "disassembly",

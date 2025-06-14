@@ -28,5 +28,5 @@ return {
     { "<leader>db", function() require("dap").toggle_breakpoint() end, silent = true},
     { "<leader>du", function() require("dapui").toggle() end, silent = true },
   },
-  enabled = true,
+  enabled = false,
 }

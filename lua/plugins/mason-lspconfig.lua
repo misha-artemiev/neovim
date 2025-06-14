@@ -3,8 +3,9 @@ return {
   lazy = false,
   opts = {
     ensure_installed = {
-      "pyright", "jdtls", "clangd",
-      "lua_ls",
+      "pyright", "jdtls", "cmake",
+      "lua_ls", "clangd", "gopls",
+      "zls", "asm_lsp", "bashls",
     },
   },
   enabled = true,
