@@ -1,7 +1,7 @@
 return {
   'nvim-telescope/telescope.nvim',
   lazy = false,
-  dependencies = { "nvim-lua/plenary.nvim", 'nvim-telescope/telescope-dap.nvim', "lpoto/telescope-docker.nvim" },
+  dependencies = { "nvim-lua/plenary.nvim", "lpoto/telescope-docker.nvim" },
   config = function()
     require("telescope").setup{
       extensions = {
@@ -11,7 +11,6 @@ return {
         }
       }
     }
-    require('telescope').load_extension('dap')
     require("telescope").load_extension("docker")
   end,
   keys = {
