@@ -3,6 +3,11 @@ return {
     lazy = false,
     dependencies = { "nvim-tree/nvim-web-devicons", },
     keys = { { "<leader>e", ":NvimTreeToggle<CR>", silent = true } },
-    opts = {},
+    opts = {
+        filters =  {
+            git_ignored = false,
+            dofile = false,
+        },
+    },
     enabled = vim.g.plugin_nvim_tree,
 }
