@@ -35,4 +35,5 @@ return {
       desc = "Quickfix List (Trouble)",
     },
   },
+  enabled = vim.g.plugin_trouble,
 }

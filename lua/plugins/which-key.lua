@@ -14,4 +14,5 @@ return {
       desc = "Buffer Local Keymaps (which-key)",
     },
   },
+  enabled = vim.g.plugin_which_key,
 }

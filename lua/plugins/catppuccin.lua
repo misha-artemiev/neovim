@@ -5,5 +5,5 @@ return {
   opts = {
     flavour = "mocha",
   },
-  enabled = true,
+  enabled = vim.g.plugin_catppuccin,
 }

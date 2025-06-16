@@ -16,4 +16,5 @@ return {
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
+  enabled = vim.g.plugin_noice,
 }

@@ -20,5 +20,5 @@ return {
     { "<leader>fh", function() require("telescope.builtin").help_tags() end, silent = true },
     { "<leader>fd", ":Telescope docker<CR>", silent = true},
   },
-  enabled = true,
+  enabled = vim.g.plugin_telescope,
 }

@@ -4,5 +4,5 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons", },
   keys = { { "<leader>e", ":NvimTreeToggle<CR>", silent = true } },
   opts = {},
-  enabled = true,
+  enabled = vim.g.plugin_nvim_tree,
 }

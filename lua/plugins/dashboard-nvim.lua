@@ -43,5 +43,5 @@ return {
       }
     }
   end,
-  enabled = true,
+  enabled = vim.g.plugin_dashboard,
 }

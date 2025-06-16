@@ -13,5 +13,5 @@ return {
     auto_attach = true,
     current_line_blame = false
   },
-  enabled = true,
+  enabled = vim.g.plugin_gitsigns,
 }
