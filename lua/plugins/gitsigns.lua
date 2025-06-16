@@ -1,17 +1,17 @@
 return {
-  "lewis6991/gitsigns.nvim",
-  lazy = false,
-  opts = {
-    signs = {
-      add          = { text = '┃' },
-      change       = { text = '┃' },
-      delete       = { text = '_' },
-      topdelete    = { text = '‾' },
-      changedelete = { text = '~' },
-      untracked    = { text = '┆' },
+    "lewis6991/gitsigns.nvim",
+    lazy = false,
+    opts = {
+        signs = {
+            add          = { text = "┃" },
+            change       = { text = "┃" },
+            delete       = { text = "_" },
+            topdelete    = { text = "‾" },
+            changedelete = { text = "~" },
+            untracked    = { text = "┆" },
+        },
+        auto_attach = true,
+        current_line_blame = false
     },
-    auto_attach = true,
-    current_line_blame = false
-  },
-  enabled = vim.g.plugin_gitsigns,
+    enabled = vim.g.plugin_gitsigns,
 }

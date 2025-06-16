@@ -6,7 +6,7 @@ vim.diagnostic.config {
     update_in_insert = true,
 }
 if vim.g.plugin_catppuccin then
-  vim.cmd.colorscheme "catppuccin"
+    vim.cmd.colorscheme "catppuccin"
 end
 
 vim.g.loadded_netrw = 1
@@ -14,5 +14,5 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.o.signcolumn = "yes"
 if vim.g.config_numbers then
-  vim.opt.number = true 
+    vim.opt.number = true 
 end

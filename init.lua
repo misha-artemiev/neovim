@@ -1,3 +1,5 @@
 require "config.config"
-require "config.lazy"
-require "config.options"
+if not vim.g.config_default then
+    require "config.lazy"
+    require "config.options"
+end

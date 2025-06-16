@@ -1,8 +1,8 @@
 return {
-  "nvim-tree/nvim-tree.lua",
-  lazy = false,
-  dependencies = { "nvim-tree/nvim-web-devicons", },
-  keys = { { "<leader>e", ":NvimTreeToggle<CR>", silent = true } },
-  opts = {},
-  enabled = vim.g.plugin_nvim_tree,
+    "nvim-tree/nvim-tree.lua",
+    lazy = false,
+    dependencies = { "nvim-tree/nvim-web-devicons", },
+    keys = { { "<leader>e", ":NvimTreeToggle<CR>", silent = true } },
+    opts = {},
+    enabled = vim.g.plugin_nvim_tree,
 }
