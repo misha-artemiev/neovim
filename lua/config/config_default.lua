@@ -8,7 +8,7 @@ vim.g.lsp_cmake = false
 vim.g.lsp_swift = false
 vim.g.lsp_zig = false
 vim.g.lsp_bash = false
-vim.g.lsp_lua = false
+vim.g.lsp_lua = true
 vim.g.lsp_assembly = false
 
 vim.g.plugin_dashboard = true
