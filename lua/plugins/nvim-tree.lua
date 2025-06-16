@@ -6,7 +6,7 @@ return {
     opts = {
         filters =  {
             git_ignored = false,
-            dofile = false,
+            dotfiles = false,
         },
     },
     enabled = vim.g.plugin_nvim_tree,
