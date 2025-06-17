@@ -1,2 +1,3 @@
 lazy-lock.json
-lua/config/config.lua
+lua/config/config_override.lua
+.lua

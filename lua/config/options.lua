@@ -12,7 +12,9 @@ end
 vim.g.loadded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.o.signcolumn = "yes"
+if vim.g.config_signcolumn then
+    vim.o.signcolumn = "yes"
+end
 if vim.g.config_numbers then
     vim.opt.number = true
 end

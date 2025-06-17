@@ -1,18 +1,8 @@
 return {
     "nvim-telescope/telescope.nvim",
     lazy = false,
-    dependencies = { "nvim-lua/plenary.nvim", "lpoto/telescope-docker.nvim" },
-    config = function()
-        require("telescope").setup{
-            extensions = {
-                docker = {
-                    binary = "podman",
-                    log_level = vim.log.levels.INFO,
-                }
-            }
-        }
-        require("telescope").load_extension("docker")
-    end,
+    dependencies = { "nvim-lua/plenary.nvim", },
+    opts = {},
     keys = {
         { "<leader>ff", function() require("telescope.builtin").find_files() end, silent = true },
         { "<leader>fg", function() require("telescope.builtin").live_grep() end, silent = true },
