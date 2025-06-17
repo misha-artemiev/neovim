@@ -36,7 +36,8 @@ vim.g.plugin_mini_indentscope = false -- indentation guides
 vim.g.plugin_outline = false -- file structure outline
 vim.g.plugin_harpoon = false -- bookmark for files
 
-vim.g.plugin_switch_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
+vim.g.extension_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
+vim.g.extension_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
 
 -- editor config
 vim.g.config_spacing = 4 -- indentation

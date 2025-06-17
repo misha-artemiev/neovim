@@ -6,5 +6,5 @@ return {
     keys = {
         {"<leader>ff", function() require("telescope.builtin").find_files() end, silent = true},
     },
-    enabled = vim.g.plugin_fzf_lua and vim.g.plugin_switch_fzf_telescope,
+    enabled = vim.g.plugin_fzf_lua and vim.g.extension_fzf_telescope,
 }
