@@ -1,36 +1,42 @@
 local tree_sitter_servers = {}
 
-if vim.g.lsp_c_cpp_objc_objcpp then
+if vim.g.lang_c_cpp_objc_objcpp then
     table.insert(tree_sitter_servers, "c")
     table.insert(tree_sitter_servers, "cpp")
     table.insert(tree_sitter_servers, "objc")
 end
-if vim.g.lsp_python then
+if vim.g.lang_python then
     table.insert(tree_sitter_servers, "python")
 end
-if vim.g.lsp_go then
+if vim.g.lang_go then
     table.insert(tree_sitter_servers, "go")
 end
-if vim.g.lsp_java then
+if vim.g.lang_java then
     table.insert(tree_sitter_servers, "java")
 end
-if vim.g.lsp_cmake then
+if vim.g.lang_cmake then
     table.insert(tree_sitter_servers, "cmake")
 end
-if vim.g.lsp_assembly then
+if vim.g.lang_assembly then
     table.insert(tree_sitter_servers, "disassembly")
 end
-if vim.g.lsp_lua then
+if vim.g.lang_lua then
     table.insert(tree_sitter_servers, "lua")
 end
-if vim.g.lsp_zig then
+if vim.g.lang_zig then
     table.insert(tree_sitter_servers, "zig")
 end
-if vim.g.lsp_bash then
+if vim.g.lang_bash then
     table.insert(tree_sitter_servers, "bash")
 end
-if vim.g.lsp_swift then
+if vim.g.lang_swift then
     table.insert(tree_sitter_servers, "swift")
+end
+if vim.g.lang_html then
+    table.insert(tree_sitter_servers, "html")
+end
+if vim.g.lang_json then
+    table.insert(tree_sitter_servers, "json")
 end
 
 return {

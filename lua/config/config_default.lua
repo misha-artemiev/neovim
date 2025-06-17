@@ -3,16 +3,18 @@
 
 -- language support
 -- affects mason, lspconfig and tree-sitter
-vim.g.lsp_c_cpp_objc_objcpp = false --  requires clangd for linux arm64
-vim.g.lsp_python = false --  requires node
-vim.g.lsp_go = false --  requires go 
-vim.g.lsp_java = false
-vim.g.lsp_cmake = false
-vim.g.lsp_swift = false --  requires sourcekit
-vim.g.lsp_zig = false
-vim.g.lsp_bash = false
-vim.g.lsp_lua = false
-vim.g.lsp_assembly = false
+vim.g.lang_c_cpp_objc_objcpp = false --  requires clangd for linux arm64
+vim.g.lang_python = false --  requires node
+vim.g.lang_go = false --  requires go 
+vim.g.lang_java = false
+vim.g.lang_cmake = false
+vim.g.lang_swift = false --  requires sourcekit
+vim.g.lang_zig = false
+vim.g.lang_bash = false
+vim.g.lang_lua = false
+vim.g.lang_assembly = false
+vim.g.lang_html = false -- just parser
+vim.g.lang_json = false -- just parser
 
 -- plugins
 vim.g.plugin_dashboard = false -- homepage
@@ -32,7 +34,7 @@ vim.g.plugin_treesitter = false -- simple parser. tree-sitter binary suggested
 vim.g.plugin_toggleterm = false -- terminal window 
 vim.g.plugin_mini_indentscope = false -- indentation guides
 vim.g.plugin_outline = false -- file structure outline
-vim.g.plugin_harpoon = false
+vim.g.plugin_harpoon = false -- bookmark for files
 
 vim.g.plugin_switch_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
 
