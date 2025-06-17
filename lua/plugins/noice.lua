@@ -1,6 +1,9 @@
 return {
     "folke/noice.nvim",
     lazy = false,
+    dependencies = {
+        "MunifTanjim/nui.nvim",
+    },
     opts = {
         lsp = {
             override = {
@@ -12,9 +15,6 @@ return {
         presets = {
             long_message_to_split = true,
         }
-    },
-    dependencies = {
-        "MunifTanjim/nui.nvim",
     },
     enabled = vim.g.plugin_noice,
 }

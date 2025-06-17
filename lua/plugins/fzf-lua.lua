@@ -12,7 +12,7 @@ return {
         previewers = {},
     },
     keys = {
-        { "<leader>ff", function() require('fzf-lua').files() end, silent = true },
+        {"<leader>ff", function() require('fzf-lua').files() end, silent = true, desc = "Fuzzy file find"},
     },
     enabled = vim.g.plugin_fzf_lua and not vim.g.plugin_switch_fzf_telescope,
 }
