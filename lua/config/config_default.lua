@@ -1,9 +1,8 @@
 --     DO NOT CHANGE THIS FILE     
 -- any config changed must be done in config_override.lua
 
--- mason must be enabled to download lsp servers
--- lspconfig must be enabled to activate lsp servers
 -- language support
+-- affects mason, lspconfig and tree-sitter
 vim.g.lsp_c_cpp_objc_objcpp = false --  requires clangd for linux arm64
 vim.g.lsp_python = false --  requires node
 vim.g.lsp_go = false --  requires go 
