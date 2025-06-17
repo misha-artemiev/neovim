@@ -25,14 +25,16 @@ vim.g.plugin_nvim_tree = false -- explorer
 vim.g.plugin_lazydev = false -- parser for neovim config
 vim.g.plugin_gitsigns = false -- git signs in editor
 vim.g.plugin_stay_centered = false -- center typing cursor
-vim.g.plugin_fzf_lua = true -- file search
+vim.g.plugin_fzf_lua = true -- file search, requires fzf binary
 vim.g.plugin_lspconfig = false -- lsp servers integration
 vim.g.plugin_mason = false -- downloads lsp servers
 vim.g.plugin_blink_cmp = false -- autocompletion, display debugging info
 vim.g.plugin_treesitter = false -- simple parser. tree-sitter binary suggested
 
+vim.g.plugin_switch_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
+
 -- editor config
-vim.g.config_spacing = 4
+vim.g.config_spacing = 4 -- indentation
 vim.g.config_signcolumn = false -- always keep sign column
 vim.g.config_numbers = true -- line numbers
 

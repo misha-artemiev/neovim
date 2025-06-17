@@ -6,5 +6,5 @@ return {
     keys = {
         { "<leader>ff", function() require('fzf-lua').files() end, silent = true },
     },
-    enabled = vim.g.plugin_fzf_lua,
+    enabled = vim.g.plugin_fzf_lua and not vim.g.plugin_switch_fzf_telescope,
 }
