@@ -10,5 +10,5 @@ return {
     keys = {
         {"<leader>o", ":Outline<CR>", desc = "Toggle Outline", silent = true},
     },
-    enable = vim.g.plugin_outline,
+    enabled = vim.g.plugin_outline,
 }
