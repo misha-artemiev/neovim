@@ -14,5 +14,5 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.o.signcolumn = "yes"
 if vim.g.config_numbers then
-    vim.opt.number = true 
+    vim.opt.number = true
 end

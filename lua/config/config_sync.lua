@@ -7,5 +7,4 @@ end
 
 for config_line in default_config_file:lines() do
     local strip_line = config_line:match("([^=]+)")
-
 end
