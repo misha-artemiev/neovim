@@ -31,6 +31,9 @@ vim.g.plugin_mason = false -- downloads lsp servers
 vim.g.plugin_blink_cmp = false -- autocompletion, display debugging info
 vim.g.plugin_treesitter = false -- simple parser. tree-sitter binary suggested
 vim.g.plugin_toggleterm = false -- terminal window 
+vim.g.plugin_mini_indentscope = false -- indentation guides
+vim.g.plugin_outline = false -- file structure outline
+vim.g.plugin_harpoon = false
 
 vim.g.plugin_switch_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
 
