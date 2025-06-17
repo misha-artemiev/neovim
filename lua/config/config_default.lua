@@ -39,8 +39,9 @@ vim.g.config_numbers = true -- line numbers
 -- default editor
 vim.g.config_dafault = false
 
-if not ( os.rename("lua/config/config_override.lua","lua/config/config_override.lua") and true ) then
-    local config_override = io.open("lua/config/config_override.lua", "w")
+local config_path = vim.fn.stdpath("config")
+if not ( os.rename(config_path .. "/lua/config/config_override.lua", config_path .. "/lua/config/config_override.lua") and true ) then
+    local config_override = io.open(config_path .. "/lua/config/config_override.lua", "w")
     if config_override == nil then
         return
     end
