@@ -37,7 +37,8 @@ vim.g.plugin_outline = false -- file structure outline
 vim.g.plugin_harpoon = false -- bookmark for files
 
 vim.g.extension_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
-vim.g.extension_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
+vim.g.extension_toggleterm_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
+vim.g.extension_toggleterm_gdb = false -- gdb (requires toggleterm plugin and gdb binary)
 
 -- editor config
 vim.g.config_spacing = 4 -- indentation
