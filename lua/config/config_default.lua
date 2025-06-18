@@ -36,6 +36,10 @@ vim.g.plugin_mini_indentscope = false -- indentation guides
 vim.g.plugin_outline = false -- file structure outline
 vim.g.plugin_harpoon = false -- bookmark for files
 
+--    implementation in progress 
+vim.g.plugin_dap = false
+vim.g.plugin_overseer = false
+
 vim.g.extension_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
 vim.g.extension_toggleterm_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
 vim.g.extension_toggleterm_gdb = false -- gdb (requires toggleterm plugin and gdb binary)
