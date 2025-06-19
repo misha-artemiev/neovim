@@ -12,6 +12,8 @@ return {
             },
             symbol = "│",
         }
+
+        -- disable for specific patterns
         vim.api.nvim_create_autocmd("FileType", {
             pattern = {
                 "Trouble",
@@ -23,11 +25,11 @@ return {
                 "toggleterm",
                 "trouble",
                 "Outline",
-      },
-      callback = function()
-        vim.b.miniindentscope_disable = true
-      end,
-    })
+            },
+            callback = function()
+                vim.b.miniindentscope_disable = true
+            end,
+        })
     end,
     enabled = vim.g.plugin_mini_indentscope,
 }
