@@ -4,9 +4,6 @@ local is_dap = false
 if vim.g.plugin_toggleterm then
     var_strategy = {
         "toggleterm",
-        direction = "float",
-        open_on_start = true,
-        auto_scroll = true,
     }
 end
 
@@ -20,7 +17,10 @@ return {
     opts = {
         strategy = var_strategy,
         dap = is_dap,
-        templates = { "builtin",},
+        templates = { "builtin", "user.gcc_build"},
+    },
+    keys = {
+        {"<leader>or", ":OverseerRun<CR>", silent = true, desc = "Overseer run"},
     },
     enabled = vim.g.plugin_overseer,
 }

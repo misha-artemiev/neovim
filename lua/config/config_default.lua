@@ -33,8 +33,10 @@ vim.g.plugin_blink_cmp = false -- autocompletion, display debugging info
 vim.g.plugin_treesitter = false -- simple parser. tree-sitter binary suggested
 vim.g.plugin_toggleterm = false -- terminal window 
 vim.g.plugin_mini_indentscope = false -- indentation guides
+vim.g.plugin_mini_pairs = false
 vim.g.plugin_outline = false -- file structure outline
 vim.g.plugin_harpoon = false -- bookmark for files
+vim.g.plugin_lualine = false -- fancy status line (bottom line)
 
 --    implementation in progress 
 vim.g.plugin_dap = false
@@ -43,6 +45,7 @@ vim.g.plugin_overseer = false
 vim.g.extension_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
 vim.g.extension_toggleterm_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
 vim.g.extension_toggleterm_gdb = false -- gdb (requires toggleterm plugin and gdb binary)
+vim.g.extension_noice_treesitter = false -- tree-sitter parsers for noice (vim, regex, lua, bash, markdown, markdown_inline)
 
 -- editor config
 vim.g.config_spacing = 4 -- indentation
@@ -52,6 +55,7 @@ vim.g.config_numbers = true -- line numbers
 -- default editor
 vim.g.config_dafault = false
 
+-- auto config_override.lua creation 
 local config_path = vim.fn.stdpath("config")
 if not ( os.rename(config_path .. "/lua/config/config_override.lua", config_path .. "/lua/config/config_override.lua") and true ) then
     local config_override = io.open(config_path .. "/lua/config/config_override.lua", "w")

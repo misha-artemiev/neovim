@@ -9,32 +9,38 @@ return {
                 center = {
                     {
                         icon = "󰈞 ",
-                        desc = "Find File",
+                        desc = "Find File",
                         key = "f",
                         key_hl = "Number",
-                        action = function() require("telescope.builtin").find_files() end,
+                        action = function()
+                            if vim.g.extension_fzf_telescope then
+                                require("telescope.builtin").find_files()
+                            else
+                                require('fzf-lua').files()
+                            end
+                        end,
                     },
                     {
                         icon = " ",
-                        desc = "Open Config",
+                        desc = "Open Config",
                         key = "c",
                         action = ":NvimTreeToggle ~/.config/nvim"
                     },
                     {
                         icon = " ",
-                        desc = "Open lazy",
+                        desc = "Open lazy",
                         key = "l",
                         action = ":Lazy"
                     },
                     {
                         icon = "󰚰 ",
-                        desc = "Lazy Update",
+                        desc = "Lazy Update",
                         key = "u",
                         action = ":Lazy update"
                     },
                     {
                         icon = "󰈆 ",
-                        desc = "Quit",
+                        desc = "Quit",
                         key = "q",
                         action = ":qa"
                     },

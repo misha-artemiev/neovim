@@ -1,9 +1,7 @@
 return {
     "folke/noice.nvim",
     lazy = false,
-    dependencies = {
-        "MunifTanjim/nui.nvim",
-    },
+    dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
     opts = {
         lsp = {
             override = {
@@ -12,9 +10,6 @@ return {
                 ["cmp.entry.get_documentation"] = true,
             },
         },
-        presets = {
-            long_message_to_split = true,
-        }
     },
     enabled = vim.g.plugin_noice,
 }

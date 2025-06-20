@@ -20,13 +20,13 @@ end
 if vim.g.lang_assembly then
     table.insert(tree_sitter_servers, "disassembly")
 end
-if vim.g.lang_lua then
+if vim.g.lang_lua or vim.g.extension_noice_treesitter then
     table.insert(tree_sitter_servers, "lua")
 end
 if vim.g.lang_zig then
     table.insert(tree_sitter_servers, "zig")
 end
-if vim.g.lang_bash then
+if vim.g.lang_bash or vim.g.extension_noice_treesitter then
     table.insert(tree_sitter_servers, "bash")
 end
 if vim.g.lang_swift then
@@ -37,6 +37,16 @@ if vim.g.lang_html then
 end
 if vim.g.lang_json then
     table.insert(tree_sitter_servers, "json")
+end
+if vim.g.extension_noice_treesitter then
+    table.insert(tree_sitter_servers, "vim")
+end
+if vim.g.extension_noice_treesitter then
+    table.insert(tree_sitter_servers, "regex")
+end
+if vim.g.extension_noice_treesitter then
+    table.insert(tree_sitter_servers, "markdown")
+    table.insert(tree_sitter_servers, "markdown_inline")
 end
 
 return {
