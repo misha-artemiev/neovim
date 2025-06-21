@@ -49,6 +49,7 @@ vim.g.extension_fzf_telescope = false -- replace fzf_lua with telescope (telesco
 vim.g.extension_toggleterm_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
 vim.g.extension_toggleterm_gdb = false -- gdb (requires toggleterm plugin and gdb binary)
 vim.g.extension_noice_treesitter = false -- tree-sitter parsers for noice (vim, regex, lua, bash, markdown, markdown_inline)
+vim.g.extension_telescope_for_dap = false -- telescope ui for dap (requires telescope and dap) (its a plugin)
 
 -- editor config
 vim.g.config_spacing = 4 -- indentation
