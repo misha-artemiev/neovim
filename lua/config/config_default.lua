@@ -43,13 +43,10 @@ vim.g.plugin_todo_comments = false -- detect todo/bug/... comments (requires rip
 --    implementation in progress 
 vim.g.plugin_dap = false -- debugging
 vim.g.plugin_overseer = false -- kinda command templates per file type
-vim.g.plugin_luasnip = false -- auto docs???
 
 vim.g.extension_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
 vim.g.extension_toggleterm_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
-vim.g.extension_toggleterm_gdb = false -- gdb (requires toggleterm plugin and gdb binary)
 vim.g.extension_noice_treesitter = false -- tree-sitter parsers for noice (vim, regex, lua, bash, markdown, markdown_inline)
-vim.g.extension_telescope_for_dap = false -- telescope ui for dap (requires telescope and dap) (its a plugin)
 
 -- editor config
 vim.g.config_spacing = 4 -- indentation

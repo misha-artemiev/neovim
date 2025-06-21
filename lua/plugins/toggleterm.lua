@@ -6,9 +6,6 @@ local toggleterm_keys = {
 if vim.g.extension_toggleterm_lazygit then
     table.insert(toggleterm_keys, {"<leader>gg", ":TermExec cmd='lazygit; exit' direction=float<CR>", silent = true, desc = "Opens floating terminal with lazygit"})
 end
-if vim.g.extension_toggleterm_gdb then
-    table.insert(toggleterm_keys, {"<leader>gdb", ":TermExec cmd='gdb -tui; exit' direction=float<CR>", silent = true, desc = "Opens floating terminal with gdb"})
-end
 
 return {
     "akinsho/toggleterm.nvim",

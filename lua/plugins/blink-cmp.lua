@@ -1,14 +1,3 @@
-local cmp_default = {"lsp", "path", "snippets", "buffer"}
-local cmp_providers = {}
-
-if vim.g.plugin_lazydev then
-    table.insert(cmp_default, "lazydev")
-    cmp_providers.lazydev = {
-        name = "LazyDev",
-        module = "lazydev.integrations.blink",
-        score_offset = 100,
-    }
-end
 
 return {
     "saghen/blink.cmp",
@@ -20,8 +9,8 @@ return {
             nerd_font_variant = "mono",
         },
         sources = {
-            default = cmp_default,
-            providers = cmp_providers,
+            default = {"lsp", "path", "snippets", "buffer"},
+            providers = {},
         },
         completion = {
             list = { selection = { preselect = false, auto_insert = false } },
