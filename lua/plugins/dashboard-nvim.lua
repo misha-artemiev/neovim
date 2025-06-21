@@ -27,7 +27,7 @@ return {
                         action = ":NvimTreeToggle ~/.config/nvim"
                     },
                     {
-                        icon = " ",
+                        icon = "󰒲 ",
                         desc = "Open lazy",
                         key = "l",
                         action = ":Lazy"
@@ -39,7 +39,7 @@ return {
                         action = ":Lazy update"
                     },
                     {
-                        icon = "󰈆 ",
+                        icon = " ",
                         desc = "Quit",
                         key = "q",
                         action = ":qa"
