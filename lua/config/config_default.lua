@@ -33,14 +33,17 @@ vim.g.plugin_blink_cmp = false -- autocompletion, display debugging info
 vim.g.plugin_treesitter = false -- simple parser. tree-sitter binary suggested
 vim.g.plugin_toggleterm = false -- terminal window 
 vim.g.plugin_mini_indentscope = false -- indentation guides
-vim.g.plugin_mini_pairs = false
+vim.g.plugin_mini_pairs = false -- auto closure for braces and quotes
 vim.g.plugin_outline = false -- file structure outline
 vim.g.plugin_harpoon = false -- bookmark for files
 vim.g.plugin_lualine = false -- fancy status line (bottom line)
+vim.g.plugin_flash = false -- cursor jump by search
+vim.g.plugin_todo_comments = false -- detect todo/bug/... comments (requires ripgrep (rg) bianry)
 
 --    implementation in progress 
-vim.g.plugin_dap = false
-vim.g.plugin_overseer = false
+vim.g.plugin_dap = false -- debugging
+vim.g.plugin_overseer = false -- kinda command templates per file type
+vim.g.plugin_luasnip = false -- auto docs???
 
 vim.g.extension_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
 vim.g.extension_toggleterm_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
