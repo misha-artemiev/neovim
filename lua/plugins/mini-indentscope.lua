@@ -25,6 +25,7 @@ return {
                 "toggleterm",
                 "trouble",
                 "Outline",
+                "asm", "nasm",
             },
             callback = function()
                 vim.b.miniindentscope_disable = true

@@ -12,7 +12,7 @@ vim.g.lang_swift = false --  requires sourcekit
 vim.g.lang_zig = false
 vim.g.lang_bash = false
 vim.g.lang_lua = false
-vim.g.lang_assembly = false
+vim.g.lang_assembly = false --  reguires cargo and rust (rustc) binaries
 vim.g.lang_html = false -- just parser
 vim.g.lang_json = false -- just parser
 
