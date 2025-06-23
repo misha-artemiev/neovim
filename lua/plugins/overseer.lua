@@ -17,7 +17,9 @@ return {
     opts = {
         strategy = var_strategy,
         dap = is_dap,
-        templates = { "builtin", "user.gcc_build"},
+        templates = {
+            "default.gcc_build",
+        },
     },
     keys = {
         {"<leader>or", ":OverseerRun<CR>", silent = true, desc = "Overseer run"},
