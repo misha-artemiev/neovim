@@ -8,6 +8,7 @@ vim.g.lang_python = false --  requires node
 vim.g.lang_go = false --  requires go 
 vim.g.lang_java = false
 vim.g.lang_cmake = false
+vim.g.lang_make = false
 vim.g.lang_swift = false --  requires sourcekit
 vim.g.lang_zig = false
 vim.g.lang_bash = false

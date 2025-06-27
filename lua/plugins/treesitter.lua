@@ -4,6 +4,7 @@ if vim.g.lang_c_cpp_objc_objcpp then
     table.insert(tree_sitter_servers, "c")
     table.insert(tree_sitter_servers, "cpp")
     table.insert(tree_sitter_servers, "objc")
+    table.insert(tree_sitter_servers, "linkerscript")
 end
 if vim.g.lang_python then
     table.insert(tree_sitter_servers, "python")
@@ -16,6 +17,9 @@ if vim.g.lang_java then
 end
 if vim.g.lang_cmake then
     table.insert(tree_sitter_servers, "cmake")
+end
+if vim.g.lang_make then
+    table.insert(tree_sitter_servers, "make")
 end
 if vim.g.lang_assembly then
     table.insert(tree_sitter_servers, "disassembly")
