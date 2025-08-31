@@ -40,6 +40,7 @@ vim.g.plugin_harpoon = false -- bookmark for files
 vim.g.plugin_lualine = false -- fancy status line (bottom line)
 vim.g.plugin_flash = false -- cursor jump by search
 vim.g.plugin_todo_comments = false -- detect todo/bug/... comments (requires ripgrep (rg) bianry)
+vim.g.plugin_transparent = false -- transparent background
 
 --    implementation in progress 
 vim.g.plugin_dap = false -- debugging
