@@ -7,6 +7,11 @@ return {
         filters =  {
             git_ignored = false,
             dotfiles = false,
+            custom = { 
+                "^.git$",
+                "^.venv$",
+                "^__pycache__$",
+            },
         },
     },
     enabled = vim.g.plugin_nvim_tree,
