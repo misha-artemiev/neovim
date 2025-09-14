@@ -1,12 +1,14 @@
 return {
     "folke/noice.nvim",
     lazy = false,
-    dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
+    dependencies = { "MunifTanjim/nui.nvim", "echasnovski/mini.notify" },
     config = function()
-        require("noice").setup()
-        require("notify").setup({
-            background_colour = "#000000",
-        })
+        require("noice").setup{
+            notify = {
+                enabled = true,
+                view = "mini",
+            },
+        }
     end,
     enabled = vim.g.plugin_noice,
 }

@@ -16,6 +16,7 @@ vim.g.lang_lua = false
 vim.g.lang_assembly = false --  reguires cargo and rust (rustc) binaries
 vim.g.lang_html = false -- just parser
 vim.g.lang_json = false -- just parser
+vim.g.lang_sql = false
 
 -- plugins
 vim.g.plugin_dashboard = false -- homepage
@@ -41,6 +42,9 @@ vim.g.plugin_lualine = false -- fancy status line (bottom line)
 vim.g.plugin_flash = false -- cursor jump by search
 vim.g.plugin_todo_comments = false -- detect todo/bug/... comments (requires ripgrep (rg) bianry)
 vim.g.plugin_transparent = false -- transparent background
+vim.g.plugin_xcode = false
+vim.g.plugin_snacks_image = false
+vim.g.plugin_oil = false
 
 --    implementation in progress 
 vim.g.plugin_dap = false -- debugging

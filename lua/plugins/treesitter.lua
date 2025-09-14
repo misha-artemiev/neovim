@@ -52,6 +52,9 @@ if vim.g.extension_noice_treesitter then
     table.insert(tree_sitter_servers, "markdown")
     table.insert(tree_sitter_servers, "markdown_inline")
 end
+if vim.g.lang_sql then
+    table.insert(tree_sitter_servers, "sql")
+end
 
 return {
     "nvim-treesitter/nvim-treesitter",
