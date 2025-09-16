@@ -42,13 +42,7 @@ vim.g.plugin_lualine = false -- fancy status line (bottom line)
 vim.g.plugin_flash = false -- cursor jump by search
 vim.g.plugin_todo_comments = false -- detect todo/bug/... comments (requires ripgrep (rg) bianry)
 vim.g.plugin_transparent = false -- transparent background
-vim.g.plugin_xcode = false
-vim.g.plugin_snacks_image = false
 vim.g.plugin_oil = false
-
---    implementation in progress 
-vim.g.plugin_dap = false -- debugging
-vim.g.plugin_overseer = false -- kinda command templates per file type
 
 vim.g.extension_fzf_telescope = false -- replace fzf_lua with telescope (telescope doesn't require fzf binary)
 vim.g.extension_toggleterm_lazygit = false -- git ui (requires toggleterm plugin and lazygit binary)
