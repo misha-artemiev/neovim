@@ -17,6 +17,7 @@ vim.g.lang_assembly = false --  reguires cargo and rust (rustc) binaries
 vim.g.lang_html = false -- just parser
 vim.g.lang_json = false -- just parser
 vim.g.lang_sql = false
+vim.g.lang_just = false
 
 -- plugins
 vim.g.plugin_dashboard = false -- homepage

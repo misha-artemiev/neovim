@@ -55,6 +55,9 @@ end
 if vim.g.lang_sql then
     table.insert(tree_sitter_servers, "sql")
 end
+if vim.g.lang_just then
+    table.insert(tree_sitter_servers, "just")
+end
 
 return {
     "nvim-treesitter/nvim-treesitter",
