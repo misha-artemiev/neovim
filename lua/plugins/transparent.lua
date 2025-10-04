@@ -16,7 +16,7 @@ return {
         on_clear = function() end,
     },
     keys = {
-        {"<leader>tt", ":TransparentToggle<CR>", desc = "Toggle Transparency", silent = true},
+        {"<leader>tr", ":TransparentToggle<CR>", desc = "Toggle Transparency", silent = true},
     },
     enabled = vim.g.plugin_transparent,
 }
