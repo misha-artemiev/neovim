@@ -8,7 +8,19 @@ return {
             lspconfig.pyright.setup { capabilities = capabilities }
         end
         if vim.g.lang_java then
-            lspconfig.jdtls.setup { capabilities = capabilities }
+            local java_lib_path = vim.fn.getcwd() .. "/libs/*.jar"
+            lspconfig.jdtls.setup {
+                capabilities = capabilities,
+                settings = {
+                    java = {
+                        project = {
+                            referencedLibraries = {
+                                java_lib_path
+                            }
+                        }
+                    }
+                }
+            }
         end
         if vim.g.lang_cmake then
             lspconfig.cmake.setup { capabilities = capabilities }
@@ -33,6 +45,9 @@ return {
         end
         if vim.g.lang_bash then
             lspconfig.bashls.setup { capabilities = capabilities }
+        end
+        if vim.g.lang_haskell then
+            lspconfig.hls.setup { capabilities = capabilities }
         end
     end,
     enabled = vim.g.plugin_lspconfig,

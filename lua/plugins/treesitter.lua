@@ -58,6 +58,9 @@ end
 if vim.g.lang_just then
     table.insert(tree_sitter_servers, "just")
 end
+if vim.g.lang_haskell then
+    table.insert(tree_sitter_servers, "haskell")
+end
 
 return {
     "nvim-treesitter/nvim-treesitter",

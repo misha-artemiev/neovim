@@ -27,6 +27,9 @@ end
 if vim.g.lang_bash then
     table.insert(lsp_servers, "bashls")
 end
+if vim.g.lang_haskell then
+    table.insert(lsp_servers, "hls")
+end
 
 return {
     "mason-org/mason-lspconfig.nvim",
