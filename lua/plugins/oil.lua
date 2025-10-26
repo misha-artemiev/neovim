@@ -14,6 +14,11 @@ return {
                     return name == ".." or name == ".git"
                 end,
             },
+            columns = {
+                "permissions",
+                "size",
+                "icon",
+            },
             win_options = {
                 wrap = true,
                 signcolumn = "yes:2",
