@@ -7,12 +7,12 @@ return {
         filters =  {
             git_ignored = false,
             dotfiles = false,
-            custom = { 
+            custom = {
                 "^.git$",
                 "^.venv$",
                 "^__pycache__$",
             },
         },
     },
-    enabled = vim.g.plugin_nvim_tree,
+    enabled = vim.g.plugin_nvim_tree and not vim.g.plugin_oil,
 }
