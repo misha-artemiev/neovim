@@ -8,7 +8,7 @@ return {
             lspconfig.pyright.setup { capabilities = capabilities }
         end
         if vim.g.lang_java then
-            local java_lib_path = vim.fn.getcwd() .. "/libs/*.jar"
+            local java_lib_path = vim.fn.getcwd() .. "/lib/*.jar"
             lspconfig.jdtls.setup {
                 capabilities = capabilities,
                 settings = {
