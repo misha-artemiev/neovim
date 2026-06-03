@@ -1,0 +1,132 @@
+vim.o.signcolumn = "yes"
+vim.opt.number = true
+vim.opt.laststatus = 3
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.diagnostic.config {
+    update_in_insert = true,
+}
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.pack.add { 
+    { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
+    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+    { src = "https://github.com/lewis6991/gitsigns.nvim" },
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+    { src = "https://github.com/neovim/nvim-lspconfig" },
+    { src = "https://github.com/saghen/blink.lib" },
+    { src = "https://github.com/saghen/blink.cmp" },
+    { src = "https://github.com/mason-org/mason.nvim" },
+    { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
+    { src = "https://github.com/folke/noice.nvim" },
+    { src = "https://github.com/MunifTanjim/nui.nvim" },
+    { src = "https://github.com/echasnovski/mini.notify" },
+    { src = "https://github.com/stevearc/oil.nvim" },
+    { src = "https://github.com/folke/which-key.nvim" },
+    { src = "https://github.com/xiyaowong/transparent.nvim" },
+    { src = "https://github.com/folke/lazydev.nvim" },
+}
+
+require("catppuccin").setup({
+    flavour = "mocha",
+})
+vim.cmd.colorscheme("catppuccin")
+
+require("gitsigns").setup({})
+
+require("nvim-treesitter").setup {
+    ensure_installed = {
+        "python",
+	"lua",
+    },
+    auto_install = false,
+    sync_install = false,
+    ignore_install = {},
+    highlight = { enable = true },
+    indent = { enable = true },
+    modules = {},
+}
+
+local cmp = require('blink.cmp')
+cmp.build():pwait()
+cmp.setup({
+    keymap = { preset = "default" },
+    appearance = {
+        nerd_font_variant = "mono",
+    },
+    sources = {
+        default = {"lsp", "path", "snippets", "buffer"},
+        providers = {},
+    },
+    completion = {
+        list = { selection = { preselect = false, auto_insert = false } },
+        documentation = { auto_show = false },
+        ghost_text = { enabled = true },
+        menu = {
+	    auto_show = true,
+	    draw = {
+	        columns = {
+		    { "label", "label_description", gap = 1 },
+		    { "kind_icon", "kind" },
+	        },
+	    }
+        },
+    },
+    signature = { enabled = true },
+})
+
+require("mason").setup({})
+require("mason-lspconfig").setup {
+    automatic_enable = false,
+    ensure_installed = {
+        "pyright",
+        "lua_ls"
+    },
+}
+
+require("noice").setup({
+    notify = {
+        enabled = true,
+        view = "mini",
+    },
+})
+
+require("oil").setup({
+    default_file_explorer = true,
+    columns = {
+    	"icon",
+    },
+    use_default_keymaps = true,
+})
+
+require("which-key").setup({})
+
+require("transparent").setup({
+    groups = {
+        'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+        'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+        'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+        'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
+        'EndOfBuffer',
+    },
+    extra_groups = {
+        "NvimTreeNormal",
+    },
+    exclude_groups = {},
+    on_clear = function() end,
+})
+
+local capabilities = require("blink.cmp").get_lsp_capabilities()
+vim.lsp.config( "pyright", { capabilities = capabilities } )
+vim.lsp.config( "lua_ls", { capabilities = capabilities } )
+vim.lsp.config( "gopls", { capabilities = capabilities } )
+
+vim.lsp.enable({
+    "pyright",
+    "lua_ls",
+    "gopls",
+})
+
+require("lazydev").setup({})
