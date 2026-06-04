@@ -27,6 +27,8 @@ vim.pack.add {
     { src = "https://github.com/folke/which-key.nvim" },
     { src = "https://github.com/xiyaowong/transparent.nvim" },
     { src = "https://github.com/folke/lazydev.nvim" },
+    { src = "https://github.com/nvim-lualine/lualine.nvim" },
+    { src = "https://github.com/arnamak/stay-centered.nvim" },
 }
 
 require("catppuccin").setup({
@@ -41,6 +43,8 @@ require("nvim-treesitter").setup {
         "python",
 	    "lua",
         "yaml",
+        "dockerfile",
+        "swift",
     },
     auto_install = false,
     sync_install = false,
@@ -85,8 +89,7 @@ require("mason-lspconfig").setup {
         "pyright",
         "lua_ls",
         "yamlls",
-        "docker_compose_language_server",
-        "docker_language_server",
+        "dockerls",
     },
 }
 
@@ -127,13 +130,35 @@ vim.lsp.config( "pyright", { capabilities = capabilities } )
 vim.lsp.config( "lua_ls", { capabilities = capabilities } )
 vim.lsp.config( "gopls", { capabilities = capabilities } )
 vim.lsp.config( "yamlls", { capabilities = capabilities } )
-vim.lsp.config( "docker_compose_language_server", { capabilities = capabilities } )
-vim.lsp.config( "docker_language_server", { capabilities = capabilities } )
+vim.lsp.config( "dockerls", { capabilities = capabilities } )
+vim.lsp.config( "sourcekit", { capabilities = capabilities } )
 
 vim.lsp.enable({
     "pyright",
     "lua_ls",
     "gopls",
+    "dockerls",
+    "sourcekit",
 })
 
 require("lazydev").setup({})
+
+require("lualine").setup({
+    options = {
+        icons_enabled = true,
+        theme = 'auto',
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
+        globalstatus = true,
+    },
+    sections = {
+        lualine_a = {'mode'},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_c = {'filename'},
+        lualine_x = {'encoding', 'fileformat', 'filetype'},
+        lualine_y = {'progress'},
+        lualine_z = {'location'}
+    },
+})
+
+require("stay-centered").setup({})
