@@ -10,7 +10,7 @@ vim.diagnostic.config {
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.pack.add { 
+vim.pack.add {
     { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
@@ -39,7 +39,8 @@ require("gitsigns").setup({})
 require("nvim-treesitter").setup {
     ensure_installed = {
         "python",
-	"lua",
+	    "lua",
+        "yaml",
     },
     auto_install = false,
     sync_install = false,
@@ -82,7 +83,10 @@ require("mason-lspconfig").setup {
     automatic_enable = false,
     ensure_installed = {
         "pyright",
-        "lua_ls"
+        "lua_ls",
+        "yamlls",
+        "docker_compose_language_server",
+        "docker_language_server",
     },
 }
 
@@ -122,6 +126,9 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 vim.lsp.config( "pyright", { capabilities = capabilities } )
 vim.lsp.config( "lua_ls", { capabilities = capabilities } )
 vim.lsp.config( "gopls", { capabilities = capabilities } )
+vim.lsp.config( "yamlls", { capabilities = capabilities } )
+vim.lsp.config( "docker_compose_language_server", { capabilities = capabilities } )
+vim.lsp.config( "docker_language_server", { capabilities = capabilities } )
 
 vim.lsp.enable({
     "pyright",
