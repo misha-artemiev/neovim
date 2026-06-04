@@ -29,6 +29,8 @@ vim.pack.add {
     { src = "https://github.com/folke/lazydev.nvim" },
     { src = "https://github.com/nvim-lualine/lualine.nvim" },
     { src = "https://github.com/arnamak/stay-centered.nvim" },
+    { src = "https://github.com/mfussenegger/nvim-dap" },
+    { src = "https://github.com/igorlfs/nvim-dap-view" },
 }
 
 require("catppuccin").setup({
