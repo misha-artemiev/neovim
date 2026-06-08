@@ -9,6 +9,7 @@ vim.diagnostic.config {
 }
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.mapleader = " "
 
 vim.pack.add {
     { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
@@ -31,6 +32,7 @@ vim.pack.add {
     { src = "https://github.com/arnamak/stay-centered.nvim" },
     { src = "https://github.com/mfussenegger/nvim-dap" },
     { src = "https://github.com/igorlfs/nvim-dap-view" },
+    { src = "https://github.com/ibhagwan/fzf-lua" },
 }
 
 require("catppuccin").setup({
@@ -47,6 +49,9 @@ require("nvim-treesitter").setup {
         "yaml",
         "dockerfile",
         "swift",
+        "just",
+        "markdown",
+        "make",
     },
     auto_install = false,
     sync_install = false,
@@ -92,6 +97,8 @@ require("mason-lspconfig").setup {
         "lua_ls",
         "yamlls",
         "dockerls",
+        "just",
+        "marksman",
     },
 }
 
@@ -109,10 +116,12 @@ require("oil").setup({
     },
     use_default_keymaps = true,
 })
+vim.keymap.set("n", "<leader>ee", "<cmd>Oil<cr>", { desc = "Open oil file explorer" })
 
 require("which-key").setup({})
 
 require("transparent").setup({
+    auto = true,
     groups = {
         'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
         'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
@@ -134,6 +143,8 @@ vim.lsp.config( "gopls", { capabilities = capabilities } )
 vim.lsp.config( "yamlls", { capabilities = capabilities } )
 vim.lsp.config( "dockerls", { capabilities = capabilities } )
 vim.lsp.config( "sourcekit", { capabilities = capabilities } )
+vim.lsp.config( "just", { capabilities = capabilities } )
+vim.lsp.config( "marksman", { capabilities = capabilities } )
 
 vim.lsp.enable({
     "pyright",
@@ -141,6 +152,8 @@ vim.lsp.enable({
     "gopls",
     "dockerls",
     "sourcekit",
+    "just",
+    "marksman",
 })
 
 require("lazydev").setup({})
@@ -164,3 +177,9 @@ require("lualine").setup({
 })
 
 require("stay-centered").setup({})
+
+require("fzf-lua").setup({
+
+})
+vim.keymap.set("n", "<leader>ff", function() require("fzf-lua").files() end, { desc = "Open fzf-lua file finder" })
+vim.keymap.set("n", "<leader>fl", function() require ("fzf-lua").grep_curbuf() end, { desc = "Open fzf-lua line finder" })
