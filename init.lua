@@ -33,6 +33,7 @@ vim.pack.add {
     { src = "https://github.com/mfussenegger/nvim-dap" },
     { src = "https://github.com/igorlfs/nvim-dap-view" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
+    { src = "https://github.com/folke/trouble.nvim" },
 }
 
 require("catppuccin").setup({
@@ -62,6 +63,7 @@ require("nvim-treesitter").setup {
 }
 
 local cmp = require('blink.cmp')
+---@diagnostic disable-next-line: undefined-field
 cmp.build():pwait()
 cmp.setup({
     keymap = { preset = "default" },
@@ -178,8 +180,9 @@ require("lualine").setup({
 
 require("stay-centered").setup({})
 
-require("fzf-lua").setup({
+require("fzf-lua").setup({})
+vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files <cr>", { desc = "File finder (fzf-lua)" })
+vim.keymap.set("n", "<leader>fl", "<cmd>FzfLua grep_curbuf<cr>", { desc = "Line finder (fzf-lua)" })
 
-})
-vim.keymap.set("n", "<leader>ff", function() require("fzf-lua").files() end, { desc = "Open fzf-lua file finder" })
-vim.keymap.set("n", "<leader>fl", function() require ("fzf-lua").grep_curbuf() end, { desc = "Open fzf-lua line finder" })
+require("trouble").setup({})
+vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (trouble)" })
